@@ -9,4 +9,4 @@ def test_open_selene(open_browser):
 
 def test_open_error(open_browser):
     browser.element('[name="q"]').should(be.blank).type('qwerqwerfwqeferwfverdsvgsrtevsrtevsretv').press_enter()
-    assert browser.element('[id="search"]').should(have.text('Selene - User-oriented Web UI browser tests in Python'))
+    assert browser.element('[id="search"]').should(have.no.text('Selene - User-oriented Web UI browser tests in Python'))
